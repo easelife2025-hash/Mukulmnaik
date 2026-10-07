@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 600;
+  }
+
+  body {
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #0f172a;
+  }
+
+  p {
+    font-weight: 600;
+  }
+
+  span, a, button, label, input, select, textarea, li, div {
+    font-weight: 600;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+    letter-spacing: -0.015em;
+  }
+
+  button, a {
+    font-weight: 700;
+  }
+
+  label {
+    font-weight: 700;
+  }
+
+  input, select, textarea {
+    font-weight: 600;
+  }
+
+  strong, b {
+    font-weight: 800;
+  }
+}
+
+.font-heading {
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 800;
+}
+
+.font-body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 600;
+}
+
+/* Custom scrollbar for sleek premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Moving train marquee for reviews */
+@keyframes marqueeTrain {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-train {
+  display: flex;
+  width: max-content;
+  animation: marqueeTrain 48s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-train:hover {
+  animation-play-state: paused;
+}
